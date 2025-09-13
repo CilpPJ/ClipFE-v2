@@ -1,7 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
-import { MSWComponent, QueryClientProvider } from "@/shared";
+import { MSWComponent, QueryClientProvider, Toaster } from "@/shared";
 import type { Metadata } from "next";
 
 import "./globals.css";
@@ -13,14 +12,10 @@ const pretendard = localFont({
   variable: "--font-pretendard",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const benviitLasik = localFont({
+  src: "../../public/fonts/BnviitLasik.ttf",
+  display: "swap",
+  variable: "--font-benviitLasik",
 });
 
 export const metadata: Metadata = {
@@ -35,10 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko'>
-      <body className={`${pretendard.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${pretendard.variable} ${benviitLasik.variable} antialiased`}>
         <QueryClientProvider>
           <MSWComponent />
           {children}
+          <Toaster />
         </QueryClientProvider>
       </body>
     </html>

@@ -2,6 +2,6 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function layout({ children }: Props) {
+export default function AuthLayout({ children }: Props) {
   return <div>{children}</div>;
 }
