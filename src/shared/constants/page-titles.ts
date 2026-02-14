@@ -1,7 +1,7 @@
 import { ROUTER_PATH } from "./router-path";
 
 export const PAGE_TITLES: { [key: string]: string } = {
-  [ROUTER_PATH.ADD]: "클립 추가하기",
+  [ROUTER_PATH.CLIP_SAVE]: "클립 저장",
   [ROUTER_PATH.CLIP]: "전체 클립",
   [ROUTER_PATH.CLIP_SEARCH]: "클립 검색",
   [ROUTER_PATH.FRIEND_SEARCH]: "친구 찾기",
